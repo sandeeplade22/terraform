@@ -4,12 +4,14 @@ data "aws_ami" "ubuntu" {
  
 filter {
     name   = "name"
-    values = ["ami-005bdb005fb00e791"]
+    values = ["ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20190212.1"]
 }
 
 filter {
     name   = "virtualization-type"
     values = ["hvm"]
  }
+
+owners = ["099720109477"] # Canonical
 
 }
